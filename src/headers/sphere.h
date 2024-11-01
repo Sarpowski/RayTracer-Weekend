@@ -21,7 +21,7 @@ class sphere : public hittable {
                 center_(center),
                 radius_(radius)
         {}
-        virtual bool hit(const ray& r , double rayTmin, double rayTmax, hitRecord& rec) const override{
+        virtual bool hit(const ray& r , interval ray_t, hitRecord& rec) const override{
             vec3 oc = center_ - r.origin();
             auto a = r.direction().length_squared();
             auto h = dot(r.direction(), oc);
@@ -35,9 +35,9 @@ class sphere : public hittable {
 
             // Find the nearest root that lies in the acceptable range.
             auto root = (h - sqrtd) / a;
-            if (root <= rayTmin || rayTmax  <= root) {
+            if (!ray_t.surounds(root)) {
                 root = (h + sqrtd) / a;
-                if (root <= rayTmin || rayTmax <= root)
+                if (!ray_t.surounds(root))
                     return false;
             }
 

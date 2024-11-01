@@ -25,13 +25,13 @@ namespace ryt{
         void add(std::shared_ptr<hittable> object){
             objects.push_back(object);
         }
-        bool hit(const ray& r, double rayTmin, double rayTmax, hitRecord& rec) const override{
+        bool hit(const ray& r, interval ray_t, hitRecord& rec) const override{
             hitRecord tempRec;
             bool hitAnything = false;
-            auto closestSoFar = rayTmax;
+            auto closestSoFar = ray_t.max_;
 
             for(const auto& object : objects){
-                if(object->hit(r,rayTmin,closestSoFar, tempRec)){
+                if(object->hit(r,r,interval(ray_t.min_, closestSoFar), tempRec)){
                     hitAnything = true;
                     closestSoFar = tempRec.t;
                     rec = tempRec;
