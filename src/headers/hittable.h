@@ -29,7 +29,7 @@ namespace ryt{
     class hittable{
     public:
         virtual ~hittable() =default;
-        virtual bool hit(const ray& r , double rayTmin, double rayTmax, hitRecord& rec) const =0;
+        virtual bool hit(const ray& r , interval ray_t, hitRecord& rec) const =0;
     };
 
 

@@ -5,11 +5,37 @@
 #ifndef INTERVAL_H
 #define INTERVAL_H
 
+#include "rytUtillity.h"
+
 namespace ryt{
+
     class interval{
     public:
-        interval
+        double min_;
+        double max_;
+        interval() : min_(+infinity), max_(-infinity) {} // Default interval is empty
+        interval(double min, double max)
+        :
+            min_(min),
+            max_(max)
+            {}
+
+        double size() const {
+            return max_ - min_;
+        }
+        bool contains(double x){
+            return min_ <= x && x <= max_;
+        }
+
+        bool surounds(double x )const{
+            return min_ < x && x < max_;
+        }
+
+        static const interval empty;
+        static const interval universe;
     };
+    const interval interval::empty = interval(+infinity, -infinity);
+    const interval interval::universe = interval(-infinity, +infinity);
 }
 
 

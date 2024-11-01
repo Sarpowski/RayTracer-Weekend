@@ -23,6 +23,6 @@ inline double degreeToRadiant(double degrees){
 #include "color.h"
 #include "ray.h"
 #include "vec3.h"
-
+#include "interval.h"
 
 #endif //RAYTRACER_RYTUTILLITY_H
