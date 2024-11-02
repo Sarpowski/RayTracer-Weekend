@@ -56,7 +56,7 @@
 //    return 0;
 //}
 
-#include "headers/rytUtillity.h"
+#include "headers/rytUtility.h"
 
 
 #include <iostream>

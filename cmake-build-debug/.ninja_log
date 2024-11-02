@@ -1,6 +1,9 @@
 # ninja log v6
-13	688	7522044739376387	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
 24	409	7445880123928123	CMakeFiles/RayTracer.dir/main.cpp.obj	422fc337510db924
+13	688	7522044739376387	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
 689	907	7522044746130695	RayTracer.exe	bb1344993b2f21b7
-41	638	7522047846851429	build.ninja	b1fed8fc236f1d04
+41	638	7522067398156918	build.ninja	b1fed8fc236f1d04
 24	434	7447541957443532	CMakeFiles/RayTracer.dir/src/source/vec3.cpp.obj	d36cef7bd58b62de
+2	261	7522067398156918	build.ninja	b1fed8fc236f1d04
+5	615	7522067770458038	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
+616	746	7522067776562846	RayTracer.exe	bb1344993b2f21b7

@@ -5,7 +5,7 @@
 #ifndef INTERVAL_H
 #define INTERVAL_H
 
-#include "rytUtillity.h"
+#include "rytUtility.h"
 
 namespace ryt{
 

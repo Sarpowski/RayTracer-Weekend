@@ -31,7 +31,7 @@ namespace ryt{
             auto closestSoFar = ray_t.max_;
 
             for(const auto& object : objects){
-                if(object->hit(r,r,interval(ray_t.min_, closestSoFar), tempRec)){
+                if(object->hit(r,interval(ray_t.min_, closestSoFar), tempRec)){
                     hitAnything = true;
                     closestSoFar = tempRec.t;
                     rec = tempRec;
