@@ -26,14 +26,10 @@ public:
                 color pixelColor(0,0,0);
                 for (int sample = 0; sample < samplesPerPixel; sample++){
                     ray r = getRay(i,j);
-                    pixelColor += ray_color(r, world);
+                    pixelColor += rayColor(r, world);
                 }
-                /*auto pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
-                auto ray_direction = pixel_center - center;
-                ray r(center, ray_direction);
 
-                color pixel_color = ray_color(r, world);*/
-                write_color(outputFile, pixelColor * pixelSamplesScale);
+                writeColor(outputFile, pixelColor * pixelSamplesScale);
             }
         }
 
@@ -76,13 +72,14 @@ private:
 
 
     }
-    color ray_color(const ray& r , const hittable& world) {
+    color rayColor(const ray& r , const hittable& world) {
         hitRecord rec;
         if(world.hit(r, interval(0,infinity), rec)){
-            return 0.5 * (rec.normal + color(1,1,1));
+            vec3 direction = randomOnHemisphere(rec.normal);
+            return 0.5 * rayColor(ray(rec.p,direction),world);
         }
 
-        vec3 unit_direction = unit_vector(r.direction());
+        vec3 unit_direction = unitVector(r.direction());
         auto a = 0.5*(unit_direction.y() + 1.0);
         return (1.0-a)*color(1.0, 1.0, 1.0) + a*color(0.5, 0.7, 1.0);
     }
