@@ -2,5 +2,11 @@
 24	409	7445880123928123	CMakeFiles/RayTracer.dir/main.cpp.obj	422fc337510db924
 6	596	7526771985933606	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
 597	695	7526771991901892	RayTracer.exe	bb1344993b2f21b7
-2	261	7526773587638327	build.ninja	b1fed8fc236f1d04
+2	261	7526831538693100	build.ninja	b1fed8fc236f1d04
 24	434	7447541957443532	CMakeFiles/RayTracer.dir/src/source/vec3.cpp.obj	d36cef7bd58b62de
+26	1444	7526831552124217	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
+1445	1625	7526831566417855	RayTracer.exe	bb1344993b2f21b7
+32	1317	7526832622030479	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
+1318	1482	7526832634882324	RayTracer.exe	bb1344993b2f21b7
+29	1360	7526833531560665	CMakeFiles/RayTracer.dir/src/main.cpp.obj	da762d3dd813d165
+1361	1557	7526833544885578	RayTracer.exe	bb1344993b2f21b7
